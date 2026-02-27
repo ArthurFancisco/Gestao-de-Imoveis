@@ -33,6 +33,14 @@
     </div>
 
     <div class="mb-3">
+        <label class="form-label">Proprietário</label>
+        <select class="form-select" th:field="*{proprietario.id}">
+            <option value="">Selecione um proprietário</option>
+            <option th:each="proprietario : ${proprietarios}" th:value="${proprietario.id}" th:text="${proprietario.nome}"></option>
+        </select>
+    </div>
+
+    <div class="mb-3">
         <label class="form-label">Status</label>
         <select class="form-select" th:field="*{status}">
             <option value="DISPONIVEL">Disponível</option>
