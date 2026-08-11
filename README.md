@@ -1,78 +1,72 @@
-# 🏢 ImobiGest - Sistema de Gestão Imobiliária
+# ImobiGest — Gestão Imobiliária
 
-> ⚠️ **Projeto em desenvolvimento ativo**  
-> Este sistema está em evolução contínua e novas funcionalidades estão sendo implementadas progressivamente.
+![Java 17](https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.4-6DB33F?logo=springboot&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
+![Thymeleaf](https://img.shields.io/badge/Thymeleaf-005F0F?logo=thymeleaf&logoColor=white)
 
----
+Aplicação web para gerenciamento de imóveis, construída com Spring Boot e arquitetura MVC. O projeto aplica organização em camadas, validação de dados e persistência relacional.
 
-## 📌 Sobre o Projeto
+> **Status:** projeto acadêmico em desenvolvimento.
 
-O **ImobiGest** é uma aplicação web para gerenciamento de imóveis, desenvolvida com Spring Boot utilizando arquitetura MVC.
+## Funcionalidades implementadas
 
-O objetivo do projeto é simular um sistema real de gestão imobiliária, aplicando boas práticas de desenvolvimento backend, organização em camadas e integração com frontend via Thymeleaf.
+- cadastro de imóveis;
+- listagem dinâmica;
+- persistência em PostgreSQL;
+- relacionamentos entre entidades com JPA;
+- validação de dados;
+- interface server-side com Thymeleaf.
 
-Atualmente o sistema permite:
+## Stack
 
-- Cadastro de imóveis
-- Listagem dinâmica de imóveis
-- Persistência em banco de dados
-- Relacionamento entre entidades
-
-Novas funcionalidades estão sendo planejadas e implementadas.
-
----
-
-## 🚀 Tecnologias Utilizadas
-
-- Java 17+
-- Spring Boot 3
+- Java 17
+- Spring Boot 3.4
+- Spring MVC
 - Spring Data JPA
 - Thymeleaf
-- Bootstrap 5
+- PostgreSQL
 - Maven
-- H2 / MySQL
+- Lombok
 
----
+## Arquitetura
 
-## 🏗 Arquitetura
+~~~text
+Controller
+   ↓
+Service
+   ↓
+Repository
+   ↓
+PostgreSQL
+~~~
 
-O projeto segue o padrão **MVC (Model-View-Controller)**:
+## Como executar
 
-Controller  
-→ Camada responsável por receber e tratar requisições HTTP  
+~~~bash
+git clone https://github.com/ArthurFancisco/Gestao-de-Imoveis.git
+cd Gestao-de-Imoveis/gestao
+mvn spring-boot:run
+~~~
 
-Service  
-→ Camada de regra de negócio  
+Configure previamente:
 
-Repository  
-→ Camada de acesso a dados (Spring Data JPA)  
+- DATABASE_URL
+- PGUSER
+- PGPASSWORD
+- PORT, opcional
 
-Entity  
-→ Modelo de domínio mapeado com JPA  
+A aplicação usa a porta 8080 quando PORT não é informada.
 
-Templates  
-→ Interface construída com Thymeleaf  
+## Próximas evoluções
 
----
+- concluir atualização e exclusão do CRUD;
+- adicionar autenticação e controle de acesso;
+- criar filtros e paginação;
+- implementar dashboard com métricas;
+- ampliar validações e testes;
+- preparar o deploy em nuvem.
 
-## 🏠 Funcionalidades Implementadas
+## Autor
 
-- ✅ Cadastro de imóveis
-- ✅ Listagem dinâmica de imóveis
-- ✅ Enum persistido como STRING
-- ✅ Relacionamento `@ManyToOne`
-- ✅ Estrutura preparada para CRUD completo
-
----
-
-## 🔄 Roadmap (Em Desenvolvimento)
-
-Próximas evoluções planejadas:
-
-- Implementar atualização e exclusão completas
-- Dashboard com métricas dinâmicas
-- Autenticação e controle de acesso
-- Paginação e filtros
-- Validações com Bean Validation
-- API REST paralela
-- Deploy em ambiente cloud
+Desenvolvido por [Arthur Amancio Francisco](https://www.linkedin.com/in/arthur-amancio-francisco/) como projeto de estudo e portfólio.
