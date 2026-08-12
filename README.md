@@ -44,7 +44,7 @@ PostgreSQL
 ## Como executar
 
 ~~~bash
-git clone https://github.com/ArthurFancisco/Gestao-de-Imoveis.git
+git clone https://github.com/arthur-amancio/Gestao-de-Imoveis.git
 cd Gestao-de-Imoveis/gestao
 mvn spring-boot:run
 ~~~
